@@ -1,30 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
+/* Original light mode color themes */
+/*
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-color-primary: #1e90ff;
+  --ifm-color-primary-dark: #2a95e0;
+  --ifm-color-primary-darker: #217acb;
+  --ifm-color-primary-darkest: #121317;
+  --ifm-color-primary-light: #5bc8ff;
+  --ifm-color-primary-lighter: #80d4ff;
+  --ifm-color-primary-lightest: #a6e0ff;
+}
+*/
+
+/* Inverted light mode color themes */
+:root {
+  --ifm-color-primary: #217acb;
+  --ifm-color-primary-light: #5658ec;
+  --ifm-color-primary-lighter: #6264f0;
+  --ifm-color-primary-lightest: #6e70f4;
+  --ifm-color-primary-dark: #3e3edc;
+  --ifm-color-primary-darker: #3838d8;
+  --ifm-color-primary-darkest: #f4f4f4;
+  --p-accent: #3acbff;
+  --s-accent: #4a4cec;
+  --ifm-paragraph-margin-bottom: 0px;
+  --ifm-link-color: white;
+  --ifm-link-hover-decoration: none;
+  --ifm-footer-title-color: #000000;
+  --ifm-footer-color: #000000;
+  /* --ifm-footer-background-color: #000000; */
 }
 
+/* You can override the default Infima variables here. */
+/* :root {
+  --ifm-color-primary: #1e90ff;
+  --ifm-color-primary-dark: #2a95e0;
+  --ifm-color-primary-darker: #217acb;
+  --ifm-color-primary-darkest: #121317;
+  --ifm-color-primary-light: #5bc8ff;
+  --ifm-color-primary-lighter: #80d4ff;
+  --ifm-color-primary-lightest: #a6e0ff;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+} */
+
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+[data-theme="dark"] {
+  --ifm-color-primary: #3acbff;
+  --ifm-color-primary-dark: #1c7ed6;
+  --ifm-color-primary-darker: #196fb3;
+  --ifm-color-primary-darkest: #293c87;
+  /* --ifm-color-primary-darkest: #18182c; */
+  /* --main-background-color: #121317;
+  --ifm-color-primary-darkest: #121317; */
+  --ifm-main-background-color: #1b1b1d;
+  --ifm-color-primary-darkest: #1b1b1d;
+  --ifm-color-primary-light: #4faeff;
+  --ifm-color-primary-lighter: #80bfff;
+  --ifm-color-primary-lightest: #a3d4ff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-paragraph-margin-bottom: 0px;
+  --ifm-link-color: #3acbff;
+  --ifm-link-hover-decoration: none;
+  --ifm-footer-background-color: var(--ifm-color-primary-darkest);
+  /* --ifm-footer-background-color: #000000; */
+  --ifm-footer-title-color: #ffffff;
+  --ifm-footer-color: #ffffff;
+  --ifm-navbar-background-color: #121317;
+}
+
+html{
+  background-color: var(--ifm-color-primary-darkest);
+}
+
+* {
+  font-family: "Inter", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.body-container {
+  background-color: var(--ifm-color-primary-darkest);
+  /* background-color: var(--main-background-color); */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  min-height: 100vh;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.font-semibold {
+  font-weight: 700;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  /* padding: 150px; */
+  min-height: 100vh;
+  background-color: var(--main-background-color);
+}
+
+.navbar {
+  background-color: var(--ifm-color-primary-darkest);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 10px 25px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  /* box-shadow: 0 2px 2px rgba(105, 105, 105, 0.1);  */
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-logo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.navbar-logo-container:hover {
+  text-decoration: none;
+}
+
+.navbar-logo-text {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+}
+
+.navbar-links-container {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-link:hover {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 1.5px;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 0px;
+}
+
+.test-border {
+  border: 1px solid red;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, var(--p-accent), var(--s-accent));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer {
+  background-color: var(--ifm-footer-background-color);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px 20px 0 0;
+  padding: 3rem 1rem 1rem 1rem;
+  /* color: white; */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 200px;
+}
+
+.footer-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  /* margin-bottom: 0.5rem; */
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+  width: fit-content;
+}
+
+.footer-link:hover {
+  color: var(--ifm-color-primary);
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.footer-copyright {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+}
+
+/* Add media query for responsive design */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    align-items: center;
+  }
+}
+
+.hero-welcome-text {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 600px;
+  margin: 2rem 0;
+}
+
+.quick-start-button {
+  background: linear-gradient(to right, var(--p-accent), var(--s-accent));
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 1.2rem;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.quick-start-button:hover {
+  transform: scale(1.05);
+  /* box-shadow: 0 4px 12px rgba(58, 203, 255, 0.3); */
+  text-decoration: none;
+  color: white;
 }

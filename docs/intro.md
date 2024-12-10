@@ -8,8 +8,6 @@ Welcome to the AuthWave documentation. Here you will find all the necessary info
 
 ## Table of Contents
 
-- [Features](Features/Session%20management): Overview of AuthWave and its features.
-- [Getting Started](Getting-Started): Installation and configuration steps.
-- [SDK Integration](SDK-Integration): Guide to integrating the AuthWave SDK into your application.
-- [Best Practice Guideline](Best-Practice-Guideline): Recommended modular approach for setting up AuthWave.
-- [Upcoming Features](Advanced-Features)
+- [Features](Features): Overview of AuthWave and its features.
+- [Getting Started](Getting%20Started): Installation and configuration steps.
+- [API Reference](API%20Reference): Guide to integrating the AuthWave SDK into your application.
