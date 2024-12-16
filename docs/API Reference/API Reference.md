@@ -31,6 +31,6 @@ This section provides detailed reference for the various methods offered by the 
    - [getAllSessions](session-management/#getallsessions)
    - [deleteSessionById](session-management/#deletesessionbyid)
    - [deleteAllSessions](session-management/#deleteallsessions)
-6. [User Logs](security-logs)
+6. [User Logs](user-logs)
    - [getAllUserLogs](user-logs/#getalluserlogs)
    - [getUserLogsByEventCode](user-logs/#getuserlogsbyeventcode)

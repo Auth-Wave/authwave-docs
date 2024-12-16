@@ -95,4 +95,4 @@ npm install authwave-sdk
 
     > Although **async/await** is used (and recommended) in the above example, you can also use promises or callbacks to handle the response.
 
-For more information about other SDK methods offered in the AuthService class, head over to [SDK-Integration](SDK-Integration)
+For more information about other SDK methods offered in the AuthService class, head over to [API Reference](../../API%20Reference/API%20Reference.md)
