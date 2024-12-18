@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /**
 /**
  * Any CSS included here will be global. The classic template
@@ -325,4 +321,34 @@ main {
   /* box-shadow: 0 4px 12px rgba(58, 203, 255, 0.3); */
   text-decoration: none;
   color: white;
+}
+
+
+@media (max-width: 768px) {
+  .mobile-logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .mobile-text {
+    font-size: 16px;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-welcome-text {
+    font-size: 1.1rem;
+    padding: 0 20px;
+    margin: 1.5rem 0;
+  }
 }

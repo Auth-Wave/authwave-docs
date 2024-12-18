@@ -72,7 +72,7 @@ const config: Config = {
       respectPrefersColorScheme: false,
     },
     // Replace with your project's social card
-    image: "img/authwave-logo.png",
+    image: "img/favicon.ico",
     navbar: {
       title: "Auth Wave",
       logo: {
@@ -111,7 +111,7 @@ const config: Config = {
           items: [
             {
               label: "Website",
-              to: "https://authwave.com",
+              to: "https://authwave.in",
             },
           ],
         },

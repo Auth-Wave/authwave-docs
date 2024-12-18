@@ -1,12 +1,17 @@
-
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import clsx from "clsx";
+import Layout from "@theme/Layout";
+
+import Heading from "@theme/Heading";
+import styles from "./index.module.css";
 
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
     <div className="body-container">
       <Navbar />
+      {/* <HomepageHeader /> */}
       <main>
         <Hero />
       </main>
@@ -20,14 +25,14 @@ export function Navbar() {
     <nav className="navbar w-full">
       <Link to="/">
         <div className="navbar-logo-container">
-          <img className="logo" src="/img/authwave-logo.png" alt="Auth Wave" />
-          <p className="navbar-logo-text">
+          <img className="logo mobile-logo" src="/img/authwave-logo.png" alt="Auth Wave" />
+          <p className="navbar-logo-text mobile-text">
             Auth Wave <span className="text-gradient font-semibold"> Docs</span>
           </p>
         </div>
       </Link>
       <div className="navbar-links-container">
-        <Link href="/docs/intro" className="navbar-link">
+        <Link href="/docs/intro" className="navbar-link hide-mobile">
           Documentation
         </Link>
         <Link href="https://github.com/Auth-Wave" className="navbar-link">
@@ -106,5 +111,28 @@ export function Footer() {
         </p>
       </div>
     </footer>
+  );
+}
+
+/* ----------------------------------------------------- */
+export function HomepageHeader() {
+  const { siteConfig } = useDocusaurusContext();
+  return (
+    <header className={clsx("hero hero--primary", styles.heroBanner)}>
+      <div className="container">
+        <Heading as="h1" className="hero__title">
+          {siteConfig.title}
+        </Heading>
+        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <div className={styles.buttons}>
+          <Link
+            className="button button--secondary button--lg"
+            to="/docs/intro"
+          >
+            Docusaurus Tutorial - 5min ⏱️
+          </Link>
+        </div>
+      </div>
+    </header>
   );
 }

@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Create a new project
 
-1. Head over to the [Developer Console](https://authwave.com/console) and sign in with your Auth Wave account.
+1. Head over to the [Developer Console](https://authwave.in/console) and sign in with your Auth Wave account.
 
 2. Click on the **Create a new project** button.
 
